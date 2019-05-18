@@ -15,6 +15,8 @@ handle of task via showing details about the job execution. This is proved above
 example. Instead of recieving random emails with knowing the source, Cells provide the details about the 
 overall context profile of the sender (like: location, real ip, ...).
 
-![](images/getipcommand.png)
 ![](images/getgeoenter.png)
+
+![](images/getipcommand.png)
+
 ![](images/identitycommand.png)
