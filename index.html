@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<title>SmartCells</title>
+
+<script language="javascript">
+	function SelectRedirect() {
+
+		switch (document.getElementById('Cell').value) {
+		case "IdentityMailCell":
+			window.location = "Commanders/IdentityMailCell.html";
+			break;
+
+		case "GetIPCell":
+			window.location = "Commanders/GetIPCell.html";
+			break;
+
+		case "GetGeoProfileCell":
+			window.location = "Commanders/GetGeoProfileCell.html";
+			break;
+		case "SendMailCell":
+			window.location = "Commanders/SendMailCell.html";
+			break;
+
+		default:
+			window.location = "../"; // if no selection matches then redirected to home page
+			break;
+		}// end of switch 
+	}
+
+	function hide() {
+
+		var el = document.getElementById('commander');
+		var e2 = document.getElementById('hidden');
+		var e3 = document.getElementById('agreement');
+		var e4 = document.getElementById('submit');
+		var e5 = document.getElementById('dataTable');
+
+		el.style.display = 'none';
+		e2.style.display = 'block';
+		e3.style.display = 'none';
+		e4.style.display = 'none';
+		e5.style.display = 'block';
+
+	}
+
+	var attempt = 5; // Variable to count number of attempts.
+	//Below function Executes on click of login button.
+	function validate() {
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;
+		if (username == "smartcells" && password == "2015") {
+			alert("Login successfully");
+			//window.location = "success.html"; // Redirecting to other page.
+			return false;
+		} else {
+			attempt--;// Decrementing by one.
+			alert("You have left " + attempt + " attempt;");
+			//Disabling fields after 3 attempts.
+			if (attempt == 0) {
+				document.getElementById("username").disabled = true;
+				document.getElementById("password").disabled = true;
+				document.getElementById("submit").disabled = true;
+				return false;
+			}
+		}
+	}
+</script>
+</head>
+<body>
+
+
+	<div class="register" method="POST">
+		<p style="float: right">
+		<ul>
+			<li><a  href="index.html">Home</a></li>
+			<li><a  href="infopages/contact.html">Contact</a></li>
+			<li><a  href="infopages/About.html">About</a></li>
+		</ul>
+		</p>
+		<h1>SmartCells</h1>
+		<fieldset class="row1">
+			<legend>Cell Commander</legend>
+			<p id="commander">
+				<label>Commander name </label> <input id="username" name="username"
+					required="required" type="text" /> <label>Commander
+					Password </label> <input id="password" name="password" required="required"
+					type="text" />
+
+			</p>
+
+			<p id="hidden" name="hidden" style="display: none; float: right">
+				<label>Hi Cell Commander</label>
+			</p>
+			<div class="clear"></div>
+		</fieldset>
+		<fieldset class="row2">
+			<legend>Cell Collection</legend>
+			<p></p>
+			<table style="display: none" id="dataTable" class="form" border="1">
+				<tbody>
+					<tr>
+						<img src="images/SmartCells.jpg" />
+					</tr>
+					<tr>
+						<p>
+						<td><label>Select Cell</label> <select id="Cell" name="Cell"
+							onChange="SelectRedirect();">
+								<option value=""></option>
+								<option value="IdentityMailCell">IdentityMailCell</option>
+								<option value="GetIPCell">GetIPCell</option>
+								<option value="GetGeoProfileCell">GetGeoProfileCell</option>
+								<option value="SendMailCell">SendMailCell</option>
+						</select></td>
+
+					</tr>
+
+				</tbody>
+			</table>
+			<div class="clear"></div>
+		</fieldset>
+
+		<fieldset class="row4" id="agreement">
+			<div>
+				<legend>Terms and Mailing</legend>
+				<p class="agreement">
+					<input id="checkbox" type="checkbox" value="" /> <label>*
+						I accept the <a href="#">Terms and Conditions</a>
+					</label>
+				</p>
+			</div>
+			<div class="clear"></div>
+		</fieldset>
+		<input id="submit" class="submit" type="submit"
+			value="Confirm &raquo;" onClick="validate();hide();" />
+
+		<div class="clear"></div>
+		
+		<div id="copyright" style=" width:700px; height:50px;text-align: center;margin:40px;">Copyright&copy; <br>Ahmad Karawash 2015</div>
+	</div>
+	
+</body>
+</html>

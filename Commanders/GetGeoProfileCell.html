@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="../css/default2.css" />
+<title>SmartCells</title>
+
+</head>
+<body>
+	<form action="../Executives/GetGeoProfileCell.php" class="register" method="POST">
+<p style="float:right"><ul>
+  <li><a  href="../index.html">Home</a></li>
+  <li><a  href="../infopages/Contact.html">Contact</a></li>
+  <li><a  href="../infopages/About.html">About</a></li>
+</ul>
+</p>
+
+		<h1>SmartCells</h1>
+		<fieldset class="row1">
+
+
+
+			<div class="clear"></div>
+		</fieldset>
+		<fieldset class="row2">
+			<legend>Cell Details</legend>
+			<p></p>
+			<table id="dataTable" class="form" border="1">
+				<tbody>
+					<tr>
+						<td>Cell Name</td>
+						<td>GetGeoProfileCell</td>
+					</tr>
+					<tr>
+						<p>
+						<td>Cell Description</td>
+						<td>GetIPCell job is to return Commander GeoProfile like:
+							Country, State, City based on his IP Address</td>
+					</tr>
+					<tr>
+						<td>Input:</td>
+						<td>String: IP Address</td>
+					</tr>
+					<tr>
+						<td>Output:</td>
+						<td>GeoProfile Complextype: 'address' => array ( 'name' =>
+							'address', 'type' => 'xsd:string' ), 'country' => array ( 'name'
+							=> 'country', 'type' => 'xsd:string' ), 'region' => array (
+							'name' => 'region', 'type' => 'xsd:string' ), 'city' => array (
+							'name' => 'city', 'type' => 'xsd:string' )</td>
+					</tr>
+
+				</tbody>
+			</table>
+			<div class="clear"></div>
+		</fieldset>
+		
+		<label>Commander name </label> <input id="ipaddress" name="ipaddress"
+					required="required" type="text" />
+		
+		<input id="commander2" name="commander2"
+					 type="hidden" />
+
+		<input id="submit" class="submit" type="submit"
+			value="Command &raquo;"  />
+
+		<div class="clear"></div>
+		<div id="copyright" style=" width:700px; height:50px;text-align: center;margin:40px;">Copyright&copy; Ahmad Karawash 2015</div>
+	</form>
+</body>
+</html>

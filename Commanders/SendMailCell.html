@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="../css/default2.css" />
+<title>SmartCells</title>
+
+</head>
+<body>
+	<form action="../Executives/SendMailCell.php" class="register" method="POST">
+<p style="float:right"><ul>
+  <li><a  href="../index.html">Home</a></li>
+  <li><a  href="../infopages/Contact.html">Contact</a></li>
+  <li><a  href="../infopages/About.html">About</a></li>
+</ul>
+</p>
+
+		<h1>SmartCells</h1>
+		<fieldset class="row1">
+
+
+
+			<div class="clear"></div>
+		</fieldset>
+		<fieldset class="row2">
+			<legend>Cell Details</legend>
+			<p></p>
+			<table id="dataTable" class="form" border="1">
+				<tbody>
+					<tr>
+						<td>Cell Name</td>
+						<td>SendMailCell</td>
+					</tr>
+					<tr>
+						<p>
+						<td>Cell Description</td>
+						<td>GetIPCell job is to send mail composed of a message and sender Geo context profile.</td>
+					</tr>
+					<tr>
+						<td>Input:</td>
+						<td>SendMail Complextype:'smtp' => 'xsd:string', 'port' => 'xsd:integer',
+									'authSec' => 'xsd:string',
+									'myemail' => 'xsd:string',
+									'pass' => 'xsd:string',
+									'Subject' => 'xsd:string',
+									'fromName' => 'xsd:string',
+									'To' => 'xsd:string',
+									'toName' => 'xsd:string',
+									'msg' => 'xsd:string' </td>
+					</tr>
+					<tr>
+						<td>Output:</td>
+						<td>string: result</td>
+					</tr>
+
+				</tbody>
+			</table>
+			<div class="clear"></div>
+		</fieldset>
+		
+		<label>smtp server </label> <input id="smtp" name="smtp"
+					required="required" type="text" />
+		<label>authSec </label> <input id="authSec" name="authSec"
+					required="required" type="text" />			
+		<label>port </label> <input id="port" name="port"
+					required="required" type="text" />
+		<label>email </label> <input id="myemail" name="myemail"
+					required="required" type="text" />
+		<label>password </label> <input id="pass" name="pass"
+					required="required" type="password" />
+		<label>Subject </label> <input id="Subject" name="Subject"
+					required="required" type="text" />
+		<label>fromName </label> <input id="fromName" name="fromName"
+					required="required" type="text" />
+		<label>To </label> <input id="To" name="To"
+					required="required" type="text" />
+		<label>toName </label> <input id="toName" name="toName"
+					required="required" type="text" />
+		<label>msg </label> <textarea id="msg" name="msg"
+					required="required" ></textarea>	
+																									
+		<input id="commander4" name="commander4"
+					 type="hidden" />
+		
+
+		<div class="clear"></div>
+		
+		<input id="submit" class="submit" type="submit"
+			value="Command &raquo;"  />
+			
+		<div id="copyright" style=" width:700px; height:50px;text-align: center;margin:40px;">Copyright&copy; Ahmad Karawash 2015</div>
+	</form>
+</body>
+</html>
