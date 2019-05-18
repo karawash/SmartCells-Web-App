@@ -1,6 +1,6 @@
 ## SmartCells
 
-SmartCells is a web interface for intelligent distributed system under development. 
+SmartCells is a web app for using intelligent distributed system under development. 
 It is mainly based on building a standard center of instructions for Cloud Web services, 
 known as a Cloud Brain. It is	capable to serve intelligently any type of
 request given by other machines (commanders) based on the Cells collaboration properties.
@@ -14,3 +14,5 @@ other Cells if the task require different kind of web service. Also, Cells can e
 handle of task via showing details about the job execution. This is proved above using the anonymous email
 example. Instead of recieving random emails with knowing the source, Cells provide the details about the 
 overall context profile of the sender (like: location, real ip, ...).
+
+![](images/SmartCells.jpg)
