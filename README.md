@@ -14,3 +14,5 @@ other Cells if the task require different kind of web service. Also, Cells can e
 handle of task via showing details about the job execution. This is proved above using the anonymous email
 example. Instead of recieving random emails with knowing the source, Cells provide the details about the 
 overall context profile of the sender (like: location, real ip, ...).
+
+![](images/SmartCells.jpg)
